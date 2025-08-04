@@ -1,0 +1,12 @@
+services:
+  openflow:
+    restart: unless-stopped
+    build:
+      context: ./
+    ports:
+      - 3000:3000
+    volumes:
+      - fossflow_data:/opt/openflow
+
+volumes:
+  fossflow_data:
